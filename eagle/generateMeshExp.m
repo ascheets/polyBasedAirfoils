@@ -6,7 +6,10 @@ c = 0.03; %chord length
 
 aoa = attackAngle * pi/180; %angle of attack
 
-%need coefficients, bounds
+%at this point we have access to an array of arrays of coefficients
+
+%for each element of the array coeffsMatrix call writePoly
+writePoly(coeffsMatrix(1), lowerBound, upperBound)
 
 function writePoly(coeffs, lowerBound, upperBound
 
