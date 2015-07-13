@@ -2,13 +2,11 @@ function main(attackAngle)
 
 %generates .vertex, .target, etc files
 
-numberNodes = 619;
-
 %open the file to write to
 vertex_fid = fopen(['naca2D_' num2str(512) '.vertex'], 'w');
 
 %first line is the number of vertices in the file
-fprintf(vertex_fid, '%d\n', numberNodes);
+fprintf(vertex_fid, '%d\n', 619);
 
 %general information
 
@@ -133,9 +131,9 @@ targetForce = 1.0e2;
 
 target_fid = fopen(['naca2D_' num2str(512) '.target'], 'w');
 
-fprintf(target_fid, '%d\n', numberNodes);
+fprintf(target_fid, '%d\n', 619);
 
-for s = 0:numberNodes-1
+for s = 0:numb
    
     fprintf(target_fid, '%d %1.16e\n', s, targetForce);
     

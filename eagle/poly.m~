@@ -50,9 +50,6 @@ classdef poly
             
             R = [cos(this.aoa) -sin(this.aoa); sin(this.aoa) cos(this.aoa)]; 
             
-            %open the file to write to
-            vertex_fid = fopen(['naca2D_' num2str(512) '.vertex'], 'a+');
-            
             x = this.lowerBound;
             
             while x < this.upperBound + this.initialX
